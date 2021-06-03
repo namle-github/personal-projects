@@ -85,7 +85,6 @@ function removeMealLS(mealId) {
 
 function getMealsLS() {
     const mealIds = JSON.parse(localStorage.getItem('mealIds'));
-    console.log(mealIds);
     return mealIds === null ? [] : mealIds;
 }
 
@@ -103,7 +102,6 @@ async function fetchFavMeals() {
 
 
 function addMealFav(mealData) {
-    console.log(mealData);
     const favMeal = document.createElement('li');
     favMeal.innerHTML = `
         <li>
