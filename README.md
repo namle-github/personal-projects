@@ -23,3 +23,17 @@ namle-personal-projects
 - CRUD note
 - markdown
 - localStorage
+
+5. Todo App
+- http://todomvc.com/examples/react/#/
+- CRUD todos
+- localStorage
+
+6. Movie App
+- http://uidesigndaily.com/posts/photoshop-movie-app-mobile-day-193
+- list of movies
+- movie info
+- fav movie
+- actors
+
+7. 
