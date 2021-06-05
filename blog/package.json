@@ -1,0 +1,33 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "blog prj",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/namle-github/personal-projects.git"
+  },
+  "keywords": [
+    "blog",
+    "f8",
+    "f8",
+    "nodejs",
+    "nodejs"
+  ],
+  "author": "namle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namle-github/personal-projects/issues"
+  },
+  "homepage": "https://github.com/namle-github/personal-projects#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
