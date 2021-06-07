@@ -1,6 +1,9 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const morgan = require('morgan');
+const app = express();
+const port = 3000;
+
+app.use(morgan('combined'));
 
 // define route
 app.get('/namle', (req, res) => {

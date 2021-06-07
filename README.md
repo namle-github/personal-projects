@@ -36,4 +36,21 @@ namle-personal-projects
 - fav movie
 - actors
 
-7. 
+7. Github Profiles App
+- https://uidesigndaily.com/posts/photoshop-profile-card-user-day-286
+- search for user
+- get and show data
+
+8. Drawing App
+- canvas
+- size
+- color
+
+9. Password Generator
+- http://codepen.io/FlorinPop17/full/BaBePej
+- numbers
+- letters
+- symbols
+- copy to clipboard
+
+10. Weather App
