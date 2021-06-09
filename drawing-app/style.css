@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+canvas {
+    background-color: antiquewhite;
+    /* cursor: url("./icons8-pencil-100.png") 20 86, auto; */
+    cursor: url("./icons8-pencil-32.png") 9 38, auto;
+}
+
+.toolbox {
+    background-color: rgb(9, 9, 158);
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    padding: 0.25rem;
+    width: 800px;
+}
+
+.toolbox * {
+    border: none;
+    text-align: center;
+    font-size: 100%;
+    margin: 5px 5px;
+    width: 2rem;
+}
+
+.toolbox #color {
+    padding: 0;
+    height: 2rem;
+}
+
+.toolbox #clear {
+    width: fit-content;
+}
