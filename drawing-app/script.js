@@ -4,7 +4,8 @@ const decreaseBtn = document.getElementById('decrease');
 const increaseBtn = document.getElementById('increase');
 const sizeEl = document.getElementById('size');
 const colorEl = document.getElementById('color');
-const clearEl = document.getElementById('clear');
+const clearBtn = document.getElementById('clear');
+const saveBtn = document.getElementById('save');
 
 
 var isPressed = false;
@@ -87,6 +88,11 @@ colorEl.addEventListener('change', (e) => {
     color = e.target.value;
 });
 
-clearEl.addEventListener('click', () => {
+clearBtn.addEventListener('click', () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+})
+
+saveBtn.addEventListener('click', () => {
+    var image = canvas.toDataURL("image/png");
+    document.write('<img src="'+ image+'"/>');
 })

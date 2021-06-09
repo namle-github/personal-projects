@@ -43,6 +43,6 @@ canvas {
     height: 2rem;
 }
 
-.toolbox #clear {
+.toolbox #clear, #save {
     width: fit-content;
 }
