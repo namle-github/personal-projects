@@ -20,11 +20,15 @@ body {
 }
 
 .main {
-    background-color: rgba(24, 94, 185, 0.733);
+    background-color: rgba(33, 36, 32, 0.733);
     height: 500px;
     width: 60%;
     position: relative;
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .main::-webkit-scrollbar {
@@ -38,6 +42,7 @@ body {
     transform: translateY(0);
     transition: transform 0.5s ease, opacity 0.5s ease-out;
     width: 80%;
+    /* background-color: #aaa; */
 }
 
 .prj-list {
@@ -65,7 +70,6 @@ h1 {
     overflow: hidden;
 }
 
-
 .btn:hover {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
@@ -84,7 +88,7 @@ h1 {
     transform: translateY(-200px);
 }
 
-.scroll-down {
+.scroll-right {
     transform: translateX(100%);
 }
 

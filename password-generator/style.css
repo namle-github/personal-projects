@@ -98,6 +98,6 @@ body {
 }
 
 textarea {
-    /* opacity: 0; */
+    opacity: 0;
     transition: top 50%;
 }
