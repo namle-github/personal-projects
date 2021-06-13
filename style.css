@@ -20,7 +20,7 @@ body {
 }
 
 .main {
-    background-color: rgba(33, 36, 32, 0.733);
+    background-color: rgba(33, 36, 32, 0.808);
     height: 500px;
     width: 60%;
     position: relative;
@@ -129,6 +129,30 @@ h1 {
 
 .prj-list .prj:hover {
     /* border: 1px solid #ddd; */
-    /* box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
+}
+
+
+/* Responsive layout */
+
+@media screen and (max-width: 1280px  ) {
+    .main {
+        width: 70%;
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 768px  ) {
+    .main {
+        width: 80%;
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 480px  ) {
+    .main {
+        width: 90%;
+        height: 500px;
+    }
 }

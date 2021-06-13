@@ -14,7 +14,6 @@ async function getRandomMeal() {
     const resp = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
     const respData = await resp.json();
     const randomMeal = respData.meals[0];
-    // console.log(respData.meals[0]);
 
     addMeal(randomMeal, true);
 }
