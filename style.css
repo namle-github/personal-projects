@@ -21,14 +21,19 @@ body {
 
 .main {
     background-color: rgba(24, 94, 185, 0.733);
-    min-height: 400px;
+    height: 500px;
     width: 60%;
     position: relative;
+    overflow-y: scroll;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
 }
 
 .header {
     position: absolute;
-    top: 1rem;
+    top: 5rem;
     left: 10%;
     transform: translateY(0);
     transition: transform 0.5s ease, opacity 0.5s ease-out;
@@ -86,9 +91,10 @@ h1 {
 .prj-list {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin-top: 2rem;
-    overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -99,7 +105,7 @@ h1 {
 
 .prj-list .prj {
     border: 1px solid transparent;
-    margin: 0% 3%;
+    margin: 3% 3%;
     transition: transform 0.2s ease;
 }
 
