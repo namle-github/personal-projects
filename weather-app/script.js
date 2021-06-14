@@ -6,7 +6,7 @@ const searchEl = document.getElementById('search');
 const langBtn = document.getElementById('lang');
 
 // const APIURL = (city) => `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apikey}`;
-const APIURL = (city, lang) => `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${lang}&appid=${apikey}`;
+const APIURL = (city, lang) => `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${lang}&appid=${apikey}`;
 
 async function getWeatherByLocation(city) {
     const lang = langBtn.innerHTML;
@@ -32,7 +32,7 @@ function renderTemp(data) {
     weatherEl.innerHTML = `
         <span>${data.name}(${data.sys.country})</span>
         <h2>${temp}°C</h2>
-        <img src='http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png' />
+        <img src='https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png' />
         <small>${data.weather[0].description}</small>
     `;
 
