@@ -49,7 +49,12 @@ const prjObjects = [
         path: "/movie-app/",
         imgSrc: "/movie-app/preview-mov.PNG",
         title: "Movies App"
-    }
+    },
+    {
+        path: "/weather-app/",
+        imgSrc: "/weather-app/preview-weather.PNG",
+        title: "Weather App"
+    },
 ];
 
 loadProjects();

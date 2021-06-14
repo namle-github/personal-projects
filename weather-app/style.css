@@ -5,6 +5,85 @@
 }
 
 body {
+    /* background: linear-gradient(#4e7bcaab, #4e7bca); */
+    background-image: url('/weather-app/filip-zrnzevic-QsWG0kjPQRY-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    color: #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     margin: 0;
+    position: relative;
+}
+
+button {
+    border: none;
+    background-color: #7c99c5;
+    cursor: pointer;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+button:hover {
+    border: 1px solid #ddd;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+h1 {
+    color:rgba(184, 185, 212, 0.822)
+}
+
+.weather {
+    background-color: rgba(20, 56, 104, 0.87);
+    /* box-shadow: 0 -2px 5px rgba(26, 77, 110, 0.3); */
+    border-radius: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 0 2rem;
+    width: 600px;
+}
+
+.weather span {
+    font-size: 1.2rem;
+    width: 150px;
+}
+
+.weather * {
+    /* border: 1px solid black; */
+    width: 100px;
+}
+
+.search {
+    border-radius: 30px;
+    border: none;
+    background-color: #1f4070de;
+    color: #ddd;
+    font-family: inherit;
+    font-size: 1rem;
+    height: 3rem;
+    padding-left: 1rem;
+    width: 300px;
+    outline: none;
+}
+
+.search::placeholder {
+    color: rgba(221, 221, 221, 0.596);
+}
+
+small {
+    margin-bottom: 1rem;
 }
