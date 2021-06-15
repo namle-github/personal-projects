@@ -87,3 +87,24 @@ h1 {
 small {
     margin-bottom: 1rem;
 }
+
+@media only screen and (max-width: 720px) {
+    .weather {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* margin: 1rem; */
+        padding: 2rem;
+        width: 200px;
+    }
+
+    .weather * {
+        text-align: center;
+        width: 150px;
+    }
+
+    h1 {
+        color:rgb(76, 78, 119)
+    }
+}
