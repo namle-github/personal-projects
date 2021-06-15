@@ -5,7 +5,6 @@
 }
 
 body {
-    /* background: linear-gradient(#4e7bcaab, #4e7bca); */
     background-image: url('/weather-app/filip-zrnzevic-QsWG0kjPQRY-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,7 +41,7 @@ button:hover {
 }
 
 h1 {
-    color:rgba(184, 185, 212, 0.822)
+    color:rgba(0, 0, 0, 0.664)
 }
 
 .weather {
@@ -102,9 +101,5 @@ small {
     .weather * {
         text-align: center;
         width: 150px;
-    }
-
-    h1 {
-        color:rgb(76, 78, 119)
     }
 }
