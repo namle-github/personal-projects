@@ -51,9 +51,13 @@ body {
 }
 
 h1 {
-    color: rgb(163, 177, 224);
+    color: rgba(6, 179, 231, 0.822);
     margin: 0;
     padding: 0;
+}
+
+#title {
+    color: rgba(134, 189, 240, 0.719);
 }
 
 .btn {
@@ -82,6 +86,10 @@ h1 {
 
 .hidden {
     visibility: hidden;
+}
+
+.info a {
+    color: #aaa;
 }
 
 .scroll-up {
@@ -114,7 +122,7 @@ h1 {
 }
 
 .prj-list .prj a img {
-    padding: 0 0 0.5rem 0;
+    /* padding: 0 0 0.5rem 0; */
     width: 200px;
     height: 200px;
 }
@@ -129,7 +137,7 @@ h1 {
 
 .prj-list .prj:hover {
     /* border: 1px solid #ddd; */
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.397);
     transform: scale(1.05);
 }
 
@@ -149,10 +157,36 @@ h1 {
         height: 600px;
     }
 }
-
+/* 
 @media screen and (max-width: 480px  ) {
     .main {
         width: 90%;
-        height: 500px;
+        height: 600px;
     }
-}
+
+    .prj-list {
+        flex-direction: column;
+    }
+
+    .prj-list .prj {
+        padding: 5px;
+        width: 70%;
+    }
+
+    .prj-list .prj a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    .prj-list .prj a img {
+        margin-right: 2rem;
+        width: 70px;
+        height: 70px;
+    }
+
+    .prj-list .prj:hover {
+        transform: scale(1.25);
+    }
+} */
