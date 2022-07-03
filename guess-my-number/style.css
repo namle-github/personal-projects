@@ -117,3 +117,13 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+.end-number {
+  background-color: transparent;
+  border: transparent;
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: inherit;
+  width: 9rem;
+  height: 3rem;
+}

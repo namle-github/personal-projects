@@ -8,9 +8,6 @@
 // 5. Save the high score
 // 6. Reset the game
 
-// Generate a random number from 1 to 100
-let correctNumber = genCorrectNumber();
-
 const scoreEl = document.querySelector('.score');
 const highscoreEl = document.querySelector('.highscore');
 const btnCheck = document.querySelector('.check');
@@ -19,10 +16,23 @@ const guessEl = document.querySelector('.guess');
 const bodyEl = document.querySelector('body');
 const messageEl = document.querySelector('.message');
 const numberEl = document.querySelector('.number');
+const endNumberEl = document.querySelector('.end-number');
+
+// Generate a random number from 1 to Number(endNumberEl.value)
+let correctNumber = genCorrectNumber();
 guessEl.focus();
 
 let highscore = Number(highscoreEl.textContent);
 console.log('correct number:', correctNumber);
+
+endNumberEl.addEventListener('change', function (event) {
+  if (Number(endNumberEl.value) > 1000) {
+    endNumberEl.value = 1000;
+  }
+
+  scoreEl.textContent = endNumberEl.value;
+  btnAgain.click();
+});
 
 btnCheck.addEventListener('click', function () {
   let guessNumber = Number(guessEl.value);
@@ -31,31 +41,29 @@ btnCheck.addEventListener('click', function () {
   guessEl.focus();
   console.log('guess number:', guessNumber);
   if (guessNumber) {
-    if (score > 1) {
-      if (guessNumber === correctNumber) {
-        displayMessage('Correct!!!');
-        numberEl.textContent = correctNumber;
-        bodyEl.style.backgroundColor = '#60b347';
-        guessEl.disabled = true;
-        btnCheck.disabled = true;
-        if (highscore < score) {
-          highscore = score;
-          highscoreEl.textContent = highscore;
-        }
-      } else if (guessNumber >= correctNumber) {
-        displayMessage('Too high!!! 👆');
+    if (guessNumber === correctNumber) {
+      displayMessage('Correct!!!');
+      numberEl.textContent = correctNumber;
+      bodyEl.style.backgroundColor = '#60b347';
+      numberEl.style.width = '30rem';
+      guessEl.disabled = true;
+      btnCheck.disabled = true;
+      if (highscore < score) {
+        highscore = score;
+        highscoreEl.textContent = highscore;
+      }
+    } else if (guessNumber !== correctNumber) {
+      if (score > 1) {
+        displayMessage(
+          guessNumber >= correctNumber ? 'Too high!!! 👆' : 'Too low!!! 👇'
+        );
         score--;
         scoreEl.textContent = score;
       } else {
-        // guessNumber <= correctNumber
-        displayMessage('Too low!!! 👇');
-        score--;
-        scoreEl.textContent = score;
+        displayMessage('💥 You lost the game!');
+        scoreEl.textContent = 0;
+        disableInput(true);
       }
-    } else {
-      displayMessage('💥 You lost the game!');
-      scoreEl.textContent = 0;
-      disableInput(true);
     }
   } else {
     displayMessage('No number!🚩🚩🚩');
@@ -64,12 +72,13 @@ btnCheck.addEventListener('click', function () {
 
 // 6. Reset the game
 btnAgain.addEventListener('click', function () {
-  scoreEl.textContent = 100;
+  scoreEl.textContent = Number(endNumberEl.value);
   guessEl.value = '';
   guessEl.focus();
   messageEl.textContent = 'Start guessing...';
   numberEl.textContent = '?';
   bodyEl.style.backgroundColor = '#222';
+  numberEl.style.width = '15rem';
   disableInput(false);
   correctNumber = genCorrectNumber();
 });
@@ -83,7 +92,9 @@ guessEl.addEventListener('keypress', function (event) {
 });
 
 function genCorrectNumber() {
-  return Math.floor(Math.random() * 100 + 1);
+  let correctNumber = Math.floor(Math.random() * Number(endNumberEl.value) + 1);
+  console.log('correct number:', correctNumber);
+  return correctNumber;
 }
 
 function displayMessage(message) {
