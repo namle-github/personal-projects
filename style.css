@@ -23,6 +23,7 @@ body {
     background-color: rgba(33, 36, 32, 0.808);
     height: 500px;
     width: 60%;
+    /* border-radius: 10px; */
     position: relative;
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -51,7 +52,7 @@ body {
 }
 
 h1 {
-    color: rgba(6, 179, 231, 0.822);
+    color: rgba(255, 255, 255, 0.822);
     margin: 0;
     padding: 0;
 }
